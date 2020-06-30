@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="PestControlMapper.wpf.controls.PropertyStripComboBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PestControlMapper.wpf.controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="20" d:DesignWidth="450">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <Rectangle x:Name="StripBackground" Fill="#2f2f38" Grid.ColumnSpan="2">
+
+        </Rectangle>
+
+        <TextBlock x:Name="PropertyHeader" Margin="8, 0, 0, 0" FontFamily="Segoe UI" FontWeight="Light" Foreground="#BDC3C7">
+            Sample Property
+        </TextBlock>
+
+        <ComboBox x:Name="PropertyComboBox" HorizontalAlignment="Stretch" Grid.Column="1">
+        </ComboBox>
+
+    </Grid>
+</UserControl>

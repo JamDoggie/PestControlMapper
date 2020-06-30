@@ -1,0 +1,74 @@
+﻿<Window x:Class="PestControlMapper.wpf.windows.ObjectProperties"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PestControlMapper.wpf.windows"
+        mc:Ignorable="d"
+        Title="ObjectProperties" Height="650" Width="590" Loaded="Window_Loaded" SizeChanged="Window_SizeChanged">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Background="#282830" >
+            <TextBlock VerticalAlignment="Center" Foreground="LightGray">
+                Object Class
+            </TextBlock>
+            <ComboBox Name="MainComboBox" Width="250" IsEditable="True" IsEnabled="False" HorizontalAlignment="Stretch" SelectionChanged="MainComboBox_SelectionChanged">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding RealName}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+        </StackPanel>
+        <ScrollViewer Grid.Row="1" Name="MainScrollViewer" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto">
+            <StackPanel x:Name="PropertyStackPanel" Orientation="Vertical" Background="#32323b">
+                <Canvas Background="#32323b" Name="PropertyViewer">
+
+                </Canvas>
+            </StackPanel>
+            
+        </ScrollViewer>
+
+        <Canvas Grid.Row="2" Background="#282830">
+            
+        </Canvas>
+        <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Left">
+
+            <ComboBox x:Name="ComponentComboBox" Width="150" IsEditable="True">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding RealName}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <Button x:Name="AddComponentButton" HorizontalAlignment="Right" Height="20" Foreground="#BDC3C7" Background="Transparent" BorderBrush="Transparent" Click="AddComponentButton_Click">
+                + Add Component
+            </Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="2">
+            <Button Width="70" Foreground="#BDC3C7" Margin="0, 0, 2, 2" Click="Button_Click_2" Height="20">
+                Cancel
+            </Button>
+
+            <Button Width="70" Foreground="#BDC3C7" Margin="0, 0, 2, 2" Click="Button_Click_1" Height="20">
+                Apply
+            </Button>
+
+            <Button Width="70" Foreground="#BDC3C7" Margin="0, 0, 2, 2" Click="Button_Click" Height="20">
+                Ok
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="PestControlMapper.wpf.controls.CheckBoxPair"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PestControlMapper.wpf.controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="25" d:DesignWidth="200">
+    <Grid>
+
+        <TextBlock Foreground="#BDC3C7" Name="MainLabel" VerticalAlignment="Center">
+            Sample Text
+        </TextBlock>
+
+        <CheckBox Name="MainCheckBox" Grid.Column="1" Visibility="Visible" VerticalAlignment="Center" HorizontalAlignment="Right">
+            
+        </CheckBox>
+    </Grid>
+</UserControl>

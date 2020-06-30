@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="PestControlMapper.wpf.controls.ComponentStrip"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PestControlMapper.wpf.controls"
+             mc:Ignorable="d" >
+    <Grid>
+        <TreeView x:Name="ComponentTree" Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Left" Margin="0">
+            <TreeViewItem x:Name="ComponentTreeItem" Header="Component Name" Foreground="#BDC3C7">
+                <StackPanel x:Name="ComponentStackPanel" Orientation="Vertical">
+                    
+                </StackPanel>
+            </TreeViewItem>
+        </TreeView>
+
+        <Button x:Name="RemoveButton" HorizontalAlignment="Right" VerticalAlignment="Top" Width="20" Height="20" Foreground="#BDC3C7" Background="Transparent" BorderBrush="Transparent">
+            -
+        </Button>
+    </Grid>
+</UserControl>
